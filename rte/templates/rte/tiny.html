@@ -1,0 +1,9 @@
+<script>
+(function($) {
+
+    var config = {{ config|safe }};
+    config = $.extend(tiny.config, config);
+    tinyMCE.init(config);
+
+})(jQuery);
+</script>
