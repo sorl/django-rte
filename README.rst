@@ -1,6 +1,6 @@
 django-rte
 ==========
-A rich text tiny mce widget with model field for Django.
+A rich-text-tinymce-widget with model field for Django.
 
 Example model usage::
 
