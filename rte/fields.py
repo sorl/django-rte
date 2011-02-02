@@ -24,6 +24,7 @@ class RTEField(SouthMixin, models.Field):
     will search mro for a fitting widget.
     """
     description = _("Text")
+    config = {}
 
     def get_internal_type(self):
         return "TextField"
@@ -34,7 +35,7 @@ class RTEField(SouthMixin, models.Field):
         return smart_unicode(value)
 
     def formfield(self, **kwargs):
-        defaults = {'widget': TinyWidget()}
+        defaults = {'widget': TinyWidget(config=self.config)}
         defaults.update(kwargs)
         return super(RTEField, self).formfield(**defaults)
 

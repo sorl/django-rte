@@ -1,4 +1,3 @@
-
 var tiny = tiny || {};
 
 tiny.config = {
@@ -10,6 +9,7 @@ tiny.config = {
     mode: "specific_textareas",
     plugins: "fullscreen,inlinepopups,contextmenu,media,paste,safari",
     theme: "advanced",
+    skin: "aino",
 
     //
     // Paste plugin
@@ -23,8 +23,6 @@ tiny.config = {
     //
     height: '300',
     width: '600',
-    // TODO
-    //content_css: "/media/css/tiny_content.css",
 
     //
     // Advanced theme 

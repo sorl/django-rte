@@ -5,7 +5,6 @@ from django.utils import simplejson
 
 
 class TinyWidget(forms.Textarea):
-
     config = {}
 
     def __init__(self, attrs=None, config=None):
@@ -18,7 +17,6 @@ class TinyWidget(forms.Textarea):
         self.config['editor_selector'] = editor_selector
         s = super(TinyWidget, self).render(name, value, attrs)
         return s + render_to_string('rte/tiny.html', {
-            'MEDIA_URL': settings.MEDIA_URL,
             'config': simplejson.dumps(self.config),
         })
 
@@ -26,6 +24,6 @@ class TinyWidget(forms.Textarea):
         js = (
             'http://ajax.microsoft.com/ajax/jquery/jquery-1.5.min.js',
             'rte/tiny_mce/tiny_mce.js',
-            'rte/js/tiny_config.js',
+            'rte/tiny_mce/config.js',
         )
 
