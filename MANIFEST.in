@@ -1,3 +1,4 @@
-include LICENSE
-include README.rst
-include docs/*
+include LICENSE README.rst
+recorsive-include docs *
+recorsive-include rte/static *
+recorsive-include rte/templates *
