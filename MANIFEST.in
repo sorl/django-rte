@@ -1,4 +1,4 @@
 include LICENSE README.rst
-recorsive-include docs *
-recorsive-include rte/static *
-recorsive-include rte/templates *
+recursive-include docs *
+recursive-include rte/static *
+recursive-include rte/templates *
