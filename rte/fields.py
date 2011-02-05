@@ -4,21 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 from rte.widgets import TinyWidget
 
 
-__all__ = ('RTEField',)
-
-
-class SouthMixin(object):
-    """
-    Just some south introspection Mixin
-    """
-    def south_field_triple(self):
-        from south.modelsinspector import introspector
-        cls_name = '%s.%s' % (self.__class__.__module__ , self.__class__.__name__)
-        args, kwargs = introspector(self)
-        return (cls_name, args, kwargs)
-
-
-class RTEField(SouthMixin, models.Field):
+class RTEField(models.Field):
     """
     Rich Text Editor Field, we can't subclass TextField since ModelAdmin
     will search mro for a fitting widget.
@@ -38,4 +24,10 @@ class RTEField(SouthMixin, models.Field):
         defaults = {'widget': TinyWidget(config=self.config)}
         defaults.update(kwargs)
         return super(RTEField, self).formfield(**defaults)
+
+    def south_field_triple(self):
+        from south.modelsinspector import introspector
+        args, kwargs = introspector(self)
+        return ('django.db.models.fields.TextField', args, kwargs)
+
 

@@ -10,6 +10,7 @@ setup(
     author_email='mikko@aino.se',
     license='BSD',
     url='https://github.com/aino/django-rte',
+    platforms='any',
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
