@@ -5,7 +5,6 @@ tiny.config = {
     // General
     //
     browsers: "msie,gecko,safari,opera",
-    language: 'sv',
     mode: "specific_textareas",
     plugins: "fullscreen,inlinepopups,contextmenu,media,paste,safari",
     theme: "advanced",

@@ -22,7 +22,7 @@ class TinyWidget(forms.Textarea):
 
     class Media:
         js = (
-            'http://ajax.microsoft.com/ajax/jquery/jquery-1.5.min.js',
+            'https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js',
             'rte/tiny_mce/tiny_mce.js',
             'rte/tiny_mce/config.js',
         )
