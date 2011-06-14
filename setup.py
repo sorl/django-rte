@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-rte',
-    version='0.3',
+    version='0.4.0',
     description='Rich text editor for Django',
     long_description=open('README.rst').read(),
     author='Mikko Hellsing',

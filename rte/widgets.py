@@ -24,6 +24,6 @@ class TinyWidget(forms.Textarea):
         js = (
             'https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js',
             'rte/tiny_mce/tiny_mce.js',
-            'rte/tiny_mce/config.js',
+            'rte/tiny.config.js',
         )
 
