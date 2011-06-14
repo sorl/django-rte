@@ -8,7 +8,7 @@ tiny.config = {
     mode: "specific_textareas",
     plugins: "fullscreen,inlinepopups,contextmenu,media,paste,safari",
     theme: "advanced",
-    skin: "aino",
+    skin: "default",
 
     //
     // Paste plugin
